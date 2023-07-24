@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       name: "",
-      confirmedName: "",
+      confirmedInput: "",
     };
   },
 
@@ -11,12 +11,12 @@ const app = Vue.createApp({
       alert("SHOW ALERT?!?!?!?");
     },
 
-    inputValue(e) {
+    saveInput(e) {
       this.name = e.target.value;
     },
 
-    inputValue2(e) {
-      this.confirmedName = e.target.value;
+    confirmInput() {
+      this.confirmedInput = this.name;
     },
   },
 });
